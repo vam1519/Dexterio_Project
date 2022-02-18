@@ -1,0 +1,37 @@
+.art{
+   
+    padding-left: 45px;
+    column-count: 3;
+    
+   
+}
+
+.zoom {
+    padding: 50px;
+   
+    transition: transform .4s; /* Animation */
+    
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.pics{
+    padding-top: 20px;
+}
+@media only screen and (min-width: 375px) and (max-width: 900px) {
+    .art{    
+        
+        column-count: 1
+    }
+
+  }
+  
+.button{
+   margin-right:20% ;
+   margin-left:12%;
+   justify-content: flex-start;
+   padding-top: 20px;
+   padding-bottom: 10px;
+}  
