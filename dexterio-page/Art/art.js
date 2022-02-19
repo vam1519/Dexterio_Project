@@ -12,8 +12,8 @@ const Art = ()=>{
 
   
 
-    const url='https://api.unsplash.com/photos/random?client_id=AfbHrpKR5I940b0Nixq5fFrWj87FnX_x5qjUuwXZFXI&count=100';
-    const [images,setImages]=useState([]);
+    const url='https://picsum.photos/v2/list?page=0&limit=100';
+    const [images,setImages]=useState([]);  
     const getImages = ()=>{
         axios.get(url).then((r)=>{
             setImages(r.data);
@@ -37,7 +37,7 @@ const Art = ()=>{
                 return (
                     <LazyLoadImage
                     effect='blur'
-                    src={image.urls.regular}
+                    src={image.download_url}
                     alt={image.alt_description}
                     key={image.id}
                     placeholderSrc="Loading..."
